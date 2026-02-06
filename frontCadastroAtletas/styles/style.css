@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: radial-gradient(circle, rgb(163, 1, 1) 0%, rgb(209, 18, 18) 60%, rgb(255, 0, 0) 100%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#logo-falcoes {
+    width: 24vh;
+}
+
+.athlete-list {
+    display: grid;
+    gap: 3vh;
+    margin-bottom: 3vh;
+}
+
+.athlete-item {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #bebebe;
+    background-color: rgba(255, 255, 0, 0.849);
+    border-radius: 5px;
+    padding: 1vh;
+    transition: all 400ms;
+}
+
+.athlete-item:hover {
+    box-shadow: 1px 1px 5px #000;
+    transform: scale(1.02);
+}
+
+.container-content {
+    & header {
+        margin-bottom: 5vh;
+        color: #fff;
+        text-shadow: 1px 1px 2px #000;
+
+        & button {
+            margin-top: 2.5vh;
+            border: none;
+            padding: 1vh;
+            border-radius: 5px;
+            font-weight: 500;
+            cursor: pointer;
+            background-color: #fff;
+            box-shadow: 1px 1px 2px #000;
+            transition: all 400ms;
+        }
+
+        & button:hover {
+            transform: scale(1.02);
+        }
+    }
+}
+
+.buttons-action {
+    display: flex;
+    align-items: center;
+    gap: 2vh;
+
+    & button {
+        border: none;
+        cursor: pointer;
+        background: none;
+    }
+
+    & img {
+        width: 3vh;
+        object-fit: cover;
+        transition: all 400ms;
+    }
+
+    & img:hover {
+        transform: scale(1.1);
+    }
+}
+
+.container-form {
+    text-align: center;
+    width: 70vh;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 6vh 4vh;
+    box-shadow: 2px 2px 5px #000;
+    z-index: 99;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    display: none;
+
+    & h2 {
+        font-weight: 600;
+        font-size: 1.7rem;
+        margin-bottom: 3vh;
+    }
+    
+    & input, select {
+        font-size: 16px;
+        padding: 1vh;
+        outline: none;
+    }
+
+    & form {
+        display: grid;
+    }
+
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+    margin-top: 3vh;
+
+    button {
+        border: none;
+        padding: 1vh 5vh;
+        border-radius: 5px;
+        background-color: rgb(66, 190, 66);
+        color: #fff;
+        font-size: 15px;
+        font-weight: 500;
+        transition: all 400ms;
+    }
+
+    button:hover {
+        transform: scale(1.02);
+    }
+}

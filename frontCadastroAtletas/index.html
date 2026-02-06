@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Falcões Running - Cadastro de Aletas</title>
+    <link rel="shortcut icon" href="assets/falcoes-logo.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="container" id="container">
+        <div class="container-content">
+            <header>
+                <img src="assets/falcoes-logo.png" alt="Logo dos Falcões Running" id="logo-falcoes" />
+                <h1>Cadastro de Aletas</h1>
+                <button onclick="openForm()">Adicionar Atleta</button>
+            </header>
+            <ul class="athlete-list" id="athlete-list">
+                <span id="null-msg" style="color: rgba(255, 255, 0, 0.849);">Nenhum atleta cadastrado.</span>
+            </ul>
+        </div>
+    </div>
+
+    <div id="container-form" class="container-form">
+        <form id="athlete-form" onsubmit="return registerAthlete(event)">
+            <h2>Adicionar Atleta</h2>
+            <input type="text" id="name" name="name" required placeholder="Nome"> <br />
+            <input type="number" id="age" name="age" required placeholder="Idade"> <br />
+
+            <select id="shirt-size" name="shirt-size" required>
+                <option value="" disabled selected>Tamanho da Camisa</option>
+                <option value="P">P</option>
+                <option value="PP">PP</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select>
+
+            <div class="form-buttons">
+                <button type="submit">Salvar</button>
+                <button type="button" onclick="closeForm()" style="background-color: red;">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="container-edit-form" class="container-form">
+        <form id="athlete-form" onsubmit="return saveEditedAthlete(event)">
+            <h2>Editar Atleta</h2>
+            <input type="text" id="edit-name" name="name" required placeholder="Nome"> <br />
+            <input type="number" id="edit-age" name="age" required placeholder="Idade"> <br />
+
+            <select id="edit-shirt-size" name="shirt-size" required>
+                <option value="" disabled selected>Tamanho da Camisa</option>
+                <option value="P">P</option>
+                <option value="PP">PP</option>
+                <option value="M">M</option>
+                <option value="G">G</option>
+                <option value="GG">GG</option>
+            </select>
+
+            <div class="form-buttons">
+                <button type="submit">Salvar</button>
+                <button type="button" onclick="closeEditForm()" style="background-color: red;">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
